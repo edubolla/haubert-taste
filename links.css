@@ -124,22 +124,14 @@ body {
 .lt-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    165deg,
-    rgba(240, 90, 40, 0.06) 0%,
-    rgba(0, 0, 0, 0.08) 35%,
-    rgba(0, 0, 0, 0.88) 100%
-  );
-  transition: background 0.3s ease;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.55) 38%, rgba(0, 0, 0, 0.08) 68%, transparent 100%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, transparent 40%);
+  transition: opacity 0.3s ease;
 }
 
 .lt-card:hover .lt-card__overlay {
-  background: linear-gradient(
-    165deg,
-    rgba(240, 90, 40, 0.12) 0%,
-    rgba(0, 0, 0, 0.04) 35%,
-    rgba(0, 0, 0, 0.78) 100%
-  );
+  opacity: 0.88;
 }
 
 /* ─── Content layer ─────────────────────────────────────────────── */
@@ -255,13 +247,56 @@ body {
 /* ─── Footer ────────────────────────────────────────────────────── */
 
 .lt-footer {
-  text-align: center;
-  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 0.25rem;
 }
 
-.lt-footer p {
+.lt-footer__icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.lt-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #242424;
   color: var(--muted);
-  font-size: 0.73rem;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.lt-icon-link:hover {
+  color: var(--text);
+  border-color: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+.lt-icon-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.lt-icon-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.lt-footer__address {
+  font-style: normal;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.72rem;
   letter-spacing: 0.05em;
   opacity: 0.45;
+  line-height: 1.6;
 }
