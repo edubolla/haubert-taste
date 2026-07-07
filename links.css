@@ -205,8 +205,8 @@ body {
 /* ─── Flat card (Fale Conosco) ──────────────────────────────────── */
 
 .lt-card--flat {
-  background: var(--bg-card);
-  border: 1px solid #222;
+  background: var(--accent);
+  border: none;
   height: 72px;
   align-items: center;
 }
@@ -220,28 +220,24 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--muted);
+  color: #fff;
   letter-spacing: 0.02em;
-  transition: color 0.2s ease;
-}
-
-.lt-card--flat:hover .lt-card__title {
-  color: var(--text);
 }
 
 .lt-card--flat .lt-card__arrow {
-  color: var(--muted);
-  transition: transform 0.22s ease, opacity 0.22s ease, color 0.2s ease;
+  color: rgba(255, 255, 255, 0.7);
+  transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
 .lt-card--flat:hover .lt-card__arrow {
-  color: var(--text);
+  color: #fff;
   opacity: 1;
   transform: translateX(4px);
 }
 
 .lt-card--flat:hover {
-  box-shadow: 0 0 0 1px #2e2e2e, 0 8px 24px rgba(0, 0, 0, 0.4);
+  background: #f36b3d;
+  box-shadow: 0 8px 28px rgba(240, 90, 40, 0.45);
 }
 
 /* ─── Footer ────────────────────────────────────────────────────── */
