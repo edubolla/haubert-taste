@@ -62,6 +62,12 @@ body {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.lt-handle:hover {
+  opacity: 0.75;
 }
 
 .lt-city {
